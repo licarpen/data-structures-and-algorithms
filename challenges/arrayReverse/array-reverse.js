@@ -18,7 +18,7 @@ const reverseArray3 = arr => {
         reversedArr.unshift(element);
     });
     return reversedArr;
-}
+};
 
 console.log(reverseArray([1, 2, 3]));
 console.log(reverseArray2([1, 2, 3]));
