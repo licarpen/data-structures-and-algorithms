@@ -1,4 +1,4 @@
-const { insertShiftArray } = require('./array-shift');
+const { insertShiftArray } = require('../array-shift');
 
 describe('array shift module', () => {
   describe('array shift', () => {
