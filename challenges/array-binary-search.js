@@ -9,7 +9,7 @@ const binarySearch = (arr, target) => {
     else if(arr[m] < target){
       l = m + 1;
     }
-    else if(arr[m] > target){
+    else {
       r = m - 1;
     }
   }  
