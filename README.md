@@ -9,3 +9,10 @@ Takes an array and inserts an element in the middle of the array
 Initialize new array. Calculate midpoint index.  Copy elements from start to midpoint.  At the midpoint, insert element.  After the midpoint, add rest of elements.  
 
 ![array reverse whiteboard](array-shift.jpg)
+
+#Binary Search
+## Purpose
+Find a target value in a sorted array using a binary search
+
+## Methodology
+Implement binary search algorithm 
