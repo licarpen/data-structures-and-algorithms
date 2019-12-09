@@ -12,7 +12,16 @@ class LinkedList {
   }
 
   insert(value){
-    return 'success';
+    // create a node with node value and next pointer of null
+    const node = new Node(value);
+    if(this.head === null){
+      this.head = node;
+    }
+    else {
+      node.next = this.head;
+      this.head = node;
+    }
+    this.length ++; 
   }
 
   includes(value){
