@@ -21,10 +21,10 @@ describe('LinkedList Class', () => {
     expect(linkedList.next).toEqual({ 'next': null, 'value': 1 });
   });
   it('returns true when finding a value within the linked list that exists', () => {
-    expect(insertShiftArray([1, 2, 4, 5], 3)).toEqual([1, 2, 3, 4, 5]);
+    expect(linkedList.includes(2)).toBeTruthy();
   });
   it('returns false when searching for a value in the linked list that does not exist', () => {
-    expect(insertShiftArray([1, 2, 4, 5], 3)).toEqual([1, 2, 3, 4, 5]);
+    expect(linkedList.includes(4)).toBeFalsy();
   });
   it('properly returns a collection of all the values that exist in the linked list', () => {
     expect(insertShiftArray([1, 2, 4, 5], 3)).toEqual([1, 2, 3, 4, 5]);
