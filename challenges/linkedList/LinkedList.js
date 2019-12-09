@@ -18,18 +18,35 @@ class LinkedList {
       this.head = node;
     }
     else {
-      node.next = this.head;
+      this.next = this.head;
       this.head = node;
     }
     this.length ++; 
   }
 
   includes(value){
-    return true;
+    let current = this.head;
+    if(current.value === value){
+      return true;
+    }
+    while(current.next !== null){
+      if(current.value === value){
+        return true;
+      }
+      current = current.next;
+    }
+    return false;
   }
 
   toString(){
-    return 'elements in linked list';
+    let str;
+    let current = this.head;
+    str += current.value;
+    while(current.next !== null){
+      current.value = current.next;
+      str += ` -> ${current.value}`;
+    }
+    return str;
   }
 }
 

@@ -18,7 +18,7 @@ describe('LinkedList Class', () => {
   it('properly inserts multiple nodes into the linked list', () => {
     linkedList.insert(1);
     linkedList.insert(2);
-    expect(insertShiftArray([1, 2, 4, 5], 3)).toEqual([1, 2, 3, 4, 5]);
+    expect(linkedList.next).toEqual({ 'next': null, 'value': 1 });
   });
   it('returns true when finding a value within the linked list that exists', () => {
     expect(insertShiftArray([1, 2, 4, 5], 3)).toEqual([1, 2, 3, 4, 5]);
