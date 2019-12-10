@@ -12,26 +12,18 @@ class LinkedList {
 
   insert(value){
     const node = new Node(value);
-    if(this.head === null){
-      this.head = node;
-    }
-    else {
-      node.next = this.head;
-      this.head = node;
-    }
+    node.next = this.head;
+    this.head = node;
   }
 
   includes(value){
     let currentNode = this.head;
-    if(currentNode.value === value){
-      return true;
-    }
-    while(currentNode.next !== null){
+    while(currentNode){
       if(currentNode.value === value){
         return true;
       }
       currentNode = currentNode.next;
-    }
+    }  
     return false;
   }
 
@@ -85,6 +77,19 @@ class LinkedList {
     previousNode.next = node;
     return true;
   }
+
+  delete(value){
+    let currentNode = this.head;
+    do{
+      if(currentNode.value === value){
+        return true;
+      }
+      currentNode = currentNode.next;
+    }
+    while(currentNode.next !== null);
+    return false;
+  }
+  
 }
 
 module.exports = { LinkedList, Node };
