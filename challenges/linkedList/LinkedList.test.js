@@ -31,4 +31,15 @@ describe('LinkedList Class', () => {
     linkedList.insert(5);
     expect(linkedList.toString()).toEqual('5 -> 4 -> 3 -> 2 -> 1 -> 0');
   });
+  it('successfully adds a node to the end of the linked list', () => {
+    linkedList.append(10);
+    expect(linkedList.includes(10)).toBeTruthy;
+    expect(linkedList.toString()).toEqual('5 -> 4 -> 3 -> 2 -> 1 -> 0 -> 10');
+  });
+
+//Can successfully add multiple nodes to the end of a linked list
+//Can successfully insert a node before a node located i the middle of a linked list
+//Can successfully insert a node before the first node of a linked list
+//Can successfully insert after a node in the middle of the linked list
+//Can successfully insert a node after the last node of the linked list
 });

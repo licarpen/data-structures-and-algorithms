@@ -45,6 +45,15 @@ class LinkedList {
     }
     return str;
   }
+
+  append(value){
+    const node = new Node(value);
+    let currentNode = this.head;
+    while(currentNode.next !== null){
+      currentNode = currentNode.next;
+    }
+    currentNode.next = node;
+  }
 }
 
 module.exports = { LinkedList, Node };
