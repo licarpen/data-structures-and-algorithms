@@ -18,13 +18,12 @@ class LinkedList {
 
   includes(value){
     let currentNode = this.head;
-    do{
+    while(currentNode){
       if(currentNode.value === value){
         return true;
       }
       currentNode = currentNode.next;
-    }
-    while(currentNode.next !== null);
+    }  
     return false;
   }
 
@@ -78,6 +77,19 @@ class LinkedList {
     previousNode.next = node;
     return true;
   }
+
+  delete(value){
+    let currentNode = this.head;
+    do{
+      if(currentNode.value === value){
+        return true;
+      }
+      currentNode = currentNode.next;
+    }
+    while(currentNode.next !== null);
+    return false;
+  }
+  
 }
 
 module.exports = { LinkedList, Node };
