@@ -41,10 +41,21 @@ describe('LinkedList Class', () => {
     linkedList.append(12);
     expect(linkedList.toString()).toEqual('5 -> 4 -> 3 -> 2 -> 1 -> 0 -> 10 -> 11 -> 12');
   });
+  it('successfully inserts a node before a node located in the middle of a linked list', () => {
+    linkedList.insertBefore(9, 10);
+    expect(linkedList.toString()).toEqual('5 -> 4 -> 3 -> 2 -> 1 -> 0 -> 9 -> 10 -> 11 -> 12');
+  });  
+  it('successfully inserts a node before the first node of a linked list', () => {
+    linkedList.insertBefore(6, 5);
+    expect(linkedList.toString()).toEqual('6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 0 -> 9 -> 10 -> 11 -> 12');
+  });
+  it('successfully inserts after a node in the middle of the linked list', () => {
+    linkedList.insertAfter(1, 0);
+    expect(linkedList.toString()).toEqual('6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 0 -> 1 -> 9 -> 10 -> 11 -> 12');
+  });
 
-//Can successfully add multiple nodes to the end of a linked list
-//Can successfully insert a node before a node located i the middle of a linked list
-//Can successfully insert a node before the first node of a linked list
-//Can successfully insert after a node in the middle of the linked list
-//Can successfully insert a node after the last node of the linked list
+  it('successfully inserts a node after the last node of the linked list', () => {
+    linkedList.insertAfter(13, 12);
+    expect(linkedList.toString()).toEqual('6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 0 -> 1 -> 9 -> 10 -> 11 -> 12 -> 13');
+  });
 });
