@@ -56,12 +56,6 @@ describe('LinkedList Class', () => {
 
   it('successfully inserts a node after the last node of the linked list', () => {
     linkedList.insertAfter(13, 12);
-    expect(linkedList.toString()).toEqual('5 -> 4 -> 3 -> 2 -> 1 -> 0 -> 1 -> 10 -> 11 -> 12 -> 13');
+    expect(linkedList.toString()).toEqual('6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 0 -> 1 -> 9 -> 10 -> 11 -> 12 -> 13');
   });
-
-
-
-//Can 
-//Can 
-//Can 
 });
