@@ -58,6 +58,11 @@ class LinkedList {
   insertBefore(value, reference){
     const node = new Node(value);
     let currentNode = this.head;
+    if(currentNode.value === reference){
+      node.next = this.head;
+      this.head = node;
+      return true;
+    }
     let previousNode;
     while(currentNode.value !== reference){
       previousNode = currentNode;
@@ -68,11 +73,18 @@ class LinkedList {
     return true;
   }
 
-  /*insertAfter(value, reference){
+  insertAfter(value, reference){
     const node = new Node(value);
     let currentNode = this.head;
-    return;
-  }*/
+    while(currentNode.value !== reference){
+      currentNode = currentNode.next;
+    }
+    let previousNode = currentNode;
+    currentNode = currentNode.next;
+    node.next = currentNode;
+    previousNode.next = node;
+    return true;
+  }
 }
 
 module.exports = { LinkedList, Node };
