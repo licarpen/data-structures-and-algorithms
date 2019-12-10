@@ -22,10 +22,16 @@ Initialize new array. Calculate midpoint index.  Copy elements from start to mid
 
 ![array reverse whiteboard](array-shift.jpg)
 
-#Binary Search
+# Binary Search
 ## Purpose
 Find a target value in a sorted array using a binary search
 
 ## Methodology
 Implement binary search algorithm 
+
+# Linked List
+Implement the data structure of a linked list class and methods
+
+## Methodology
+Standard methodology for linked list
 
