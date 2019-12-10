@@ -12,26 +12,19 @@ class LinkedList {
 
   insert(value){
     const node = new Node(value);
-    if(this.head === null){
-      this.head = node;
-    }
-    else {
-      node.next = this.head;
-      this.head = node;
-    }
+    node.next = this.head;
+    this.head = node;
   }
 
   includes(value){
     let currentNode = this.head;
-    if(currentNode.value === value){
-      return true;
-    }
-    while(currentNode.next !== null){
+    do{
       if(currentNode.value === value){
         return true;
       }
       currentNode = currentNode.next;
     }
+    while(currentNode.next !== null);
     return false;
   }
 
