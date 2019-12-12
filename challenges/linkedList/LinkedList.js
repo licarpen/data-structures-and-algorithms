@@ -8,12 +8,14 @@ class Node {
 class LinkedList {
   constructor(){
     this.head = null;
+    this.length = 0;
   }
 
   insert(value){
     const node = new Node(value);
     node.next = this.head;
     this.head = node;
+    this.length ++;
   }
 
   includes(value){
@@ -45,10 +47,12 @@ class LinkedList {
       currentNode = currentNode.next;
     }
     currentNode.next = node;
+    this.length ++;
   }
 
   insertBefore(value, reference){
     const node = new Node(value);
+    this.length ++;
     let currentNode = this.head;
     if(currentNode.value === reference){
       node.next = this.head;
@@ -67,6 +71,7 @@ class LinkedList {
 
   insertAfter(value, reference){
     const node = new Node(value);
+    this.length ++;
     let currentNode = this.head;
     while(currentNode.value !== reference){
       currentNode = currentNode.next;
@@ -80,6 +85,7 @@ class LinkedList {
 
   delete(value){
     let currentNode = this.head;
+    this.length --;
     do{
       if(currentNode.value === value){
         return true;
@@ -89,7 +95,17 @@ class LinkedList {
     while(currentNode.next !== null);
     return false;
   }
-  
+
+  kFromEnd(k){
+    let currentNode = this.head;
+    if(k > this.length - 1 || k < 0){
+      return 'encountered an error';
+    }
+    for(let i = 0; i < this.length - k - 1; i++){ 
+      currentNode = currentNode.next; 
+    }
+    return currentNode.value;
+  } 
 }
 
 module.exports = { LinkedList, Node };
