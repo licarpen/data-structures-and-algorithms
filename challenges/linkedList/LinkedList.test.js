@@ -58,4 +58,26 @@ describe('LinkedList Class', () => {
     linkedList.insertAfter(13, 12);
     expect(linkedList.toString()).toEqual('6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 0 -> 1 -> 9 -> 10 -> 11 -> 12 -> 13');
   });
+
+  const linkedList2 = new LinkedList();
+  linkedList2.insert(3);
+
+  it('throws error when attempt is made to return kth element from a k-1 size list', () => {
+    expect(linkedList2.kFromEnd(2)).toEqual('encountered an error');});
+
+  it('throws error when attempt is made to return element 3rd from end for list size 2', () => {
+    expect(linkedList2.kFromEnd(2)).toEqual('encountered an error');
+  });
+
+  it('throws an error when attempt is made to return the -kth element from the end (k>0)', () => {
+    expect(linkedList2.kFromEnd(-2)).toEqual('encountered an error');
+  });
+
+  it('returns the value of element 0 elements from the end', () => {
+    expect(linkedList.kFromEnd(0)).toEqual(13);
+  });
+
+  it('returns the value of the node kth from the end and in the middle of the list', () => {
+    expect(linkedList.kFromEnd(3)).toEqual(10);
+  });
 });
