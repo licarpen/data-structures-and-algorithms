@@ -9,7 +9,7 @@ const mergeLinkedLists = (list1, list2) => {
     savedNode = mergeNode.next;
     // point across to other list
     mergeNode.next = nextNode; 
-    // update
+    // update for next iteration
     nextNode = savedNode;
     mergeNode = mergeNode.next;    
   }
