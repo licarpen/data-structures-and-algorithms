@@ -1,9 +1,12 @@
 const mergeLinkedLists = (list1, list2) => {
+  if(!list1.head || !list2.head){
+    throw 'Each list must contain at least 1 node to merge.';
+  }
   let mergeNode = list1.head;
   let nextNode = list2.head;
   let savedNode;
   while(mergeNode.next || nextNode){
-    // account for list2 longer than list1
+    // account for different lengths of lists
     if(!mergeNode.next){
       mergeNode.next = nextNode;
       return list1.head;
