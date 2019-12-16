@@ -21,4 +21,3 @@ const reverseArray3 = arr => {
 };
 
 module.exports({ reverseArray, reverseArray2, reverseArray3 });
-

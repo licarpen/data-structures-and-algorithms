@@ -21,9 +21,7 @@ class LinkedList {
   includes(value){
     let currentNode = this.head;
     while(currentNode){
-      if(currentNode.value === value){
-        return true;
-      }
+      if(currentNode.value === value) return true;
       currentNode = currentNode.next;
     }  
     return false;
@@ -32,55 +30,57 @@ class LinkedList {
   toString(){
     let str = '';
     let currentNode = this.head;
-    str += currentNode.value;
-    while(currentNode.next !== null){
+    while(currentNode){
+      str += `${currentNode.value.toString()} -> `;
       currentNode = currentNode.next;
-      str += ` -> ${currentNode.value.toString()}`;
     }
-    return str;
+    return `${str}[x]`;
   }
 
   append(value){
     const node = new Node(value);
     let currentNode = this.head;
-    while(currentNode.next !== null){
-      currentNode = currentNode.next;
-    }
+    while(currentNode.next) currentNode = currentNode.next;
     currentNode.next = node;
     this.length ++;
   }
 
   insertBefore(value, reference){
-    const node = new Node(value);
-    this.length ++;
-    let currentNode = this.head;
-    if(currentNode.value === reference){
-      node.next = this.head;
-      this.head = node;
+    if(this.head.value === reference){
+      this.insert(value);
       return true;
     }
-    let previousNode;
-    while(currentNode.value !== reference){
+    let currentNode = this.head;
+    let previousNode = currentNode;
+    while(currentNode){
+      if(currentNode.value === reference){
+        const node = new Node(value);
+        previousNode.next = node;
+        node.next = currentNode;
+        this.length ++;
+        return true;
+      }
       previousNode = currentNode;
       currentNode = currentNode.next;
     }
-    node.next = currentNode;
-    previousNode.next = node;
-    return true;
+    return false;
   }
 
   insertAfter(value, reference){
-    const node = new Node(value);
-    this.length ++;
     let currentNode = this.head;
-    while(currentNode.value !== reference){
+    while(currentNode){
+      if(currentNode.value === reference){
+        let previousNode = currentNode;
+        currentNode = currentNode.next;
+        const node = new Node(value);
+        node.next = currentNode;
+        previousNode.next = node;
+        return true;
+      }
       currentNode = currentNode.next;
+      this.length ++;
     }
-    let previousNode = currentNode;
-    currentNode = currentNode.next;
-    node.next = currentNode;
-    previousNode.next = node;
-    return true;
+    return false;   
   }
 
   delete(value){
