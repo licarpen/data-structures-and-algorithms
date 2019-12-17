@@ -16,7 +16,6 @@ class Stack {
 
   pop(){
     if(!this.top){
-      console.log('empty stack');
       return null;
     }
     else {
