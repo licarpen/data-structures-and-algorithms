@@ -3,7 +3,6 @@ const { PseudoQueue } = require('./pseudo-queue');
 describe('PseudoQueue class', () => {
   const pseudoQueue = new PseudoQueue();
   pseudoQueue.enqueue(0);
-  console.log(pseudoQueue.toString());
   it('successfully sets up a queue with one value', () => {
     expect(pseudoQueue.toString()).toEqual('0 -> [x]');
   });
