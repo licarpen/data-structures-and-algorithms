@@ -30,3 +30,5 @@ class PseudoQueue {
     return `${str}[x]`;
   }
 }
+
+module.exports = { PseudoQueue };

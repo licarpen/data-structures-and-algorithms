@@ -15,9 +15,15 @@ class Stack {
   }
 
   pop(){
-    const value = this.top.value;
-    this.top = this.top.next;
-    return value;
+    if(!this.top.value){
+      console.log('no values in this stack');
+      return;
+    }
+    else {
+      const value = this.top.value;
+      this.top = this.top.next;
+      return value;
+    }
   }
 
   peek(){
@@ -28,3 +34,5 @@ class Stack {
     return !this.top.value ? true : false;
   }
 }
+
+module.exports = { Stack };
