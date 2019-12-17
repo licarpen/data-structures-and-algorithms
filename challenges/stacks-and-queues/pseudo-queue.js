@@ -7,12 +7,13 @@ class PseudoQueue {
   }
   enqueue(value){
     // move stack1 over one by one to stack2 and then add the new value to the top of stack2
-    while(this.stack1){
+    while(this.stack1.top){
+      console.log('inside stack1', this.stack1.top);
       this.stack2.push(this.stack1.pop());
     }
     this.stack1.push(value);
     // move stack2 back over to stack 1 one by one
-    while(this.stack2){
+    while(this.stack2.top){
       this.stack1.push(this.stack2.pop());
     }
   }

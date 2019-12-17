@@ -15,9 +15,9 @@ class Stack {
   }
 
   pop(){
-    if(!this.top.value){
-      console.log('no values in this stack');
-      return;
+    if(!this.top){
+      console.log('empty stack');
+      return null;
     }
     else {
       const value = this.top.value;
