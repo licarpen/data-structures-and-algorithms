@@ -1,4 +1,4 @@
-const { Stack } = require('./stack');
+const Stack = require('./stack');
 
 class PseudoQueue {
   constructor(){
@@ -31,4 +31,4 @@ class PseudoQueue {
   }
 }
 
-module.exports = { PseudoQueue };
+module.exports = PseudoQueue ;
