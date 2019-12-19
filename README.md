@@ -35,3 +35,9 @@ Implement the data structure of a linked list class and methods
 ## Methodology
 Standard methodology for linked list
 
+
+# Bracket Validation 
+Implement a function to validate sets of brackets in a string
+## Methodology
+
+
