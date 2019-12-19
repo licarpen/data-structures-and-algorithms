@@ -1,4 +1,4 @@
-const { PseudoQueue } = require('./pseudo-queue');
+const PseudoQueue = require('./pseudo-queue');
 
 describe('PseudoQueue class', () => {
   const pseudoQueue = new PseudoQueue();
