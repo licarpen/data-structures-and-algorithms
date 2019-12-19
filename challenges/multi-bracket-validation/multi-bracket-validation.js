@@ -15,7 +15,7 @@ const validateBrackets = input => {
       matches[i] === stack.top.value ? stack.pop() : stack.push(i);
     } 
   }
-  return stack.top.value === 'anchor' ? true : false;
+  return (stack.top.value === 'anchor');
 };
 
 module.exports = validateBrackets;

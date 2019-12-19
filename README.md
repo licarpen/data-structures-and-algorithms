@@ -39,5 +39,5 @@ Standard methodology for linked list
 # Bracket Validation 
 Implement a function to validate sets of brackets in a string
 ## Methodology
-
+Utilize a stack, an array with valid brackets, and a bracket pair object.  Iterate through each character in the string.  If a valid bracket, check top value of stack and see if it's a pair.  If a pair, pop top element off.  If not, push bracket into stack.  Repeat.  
 
