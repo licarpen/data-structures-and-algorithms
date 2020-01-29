@@ -10,7 +10,17 @@ class BinaryTree {
   constructor(){
     this.root = null;
   }
-  add(value) {
+  inOrder(root, array = []){
+    if(root !== null){ 
+      this.inOrder(root.left, array); 
+      console.log(root.value); 
+      array.push(root.value);
+      this.inOrder(root.right, array); 
+    } 
+    return array;
+  } 
+
+  add(value){
     if(!this.root){
       this.root = new Node(value);
       return;
@@ -38,3 +48,13 @@ class BinaryTree {
     }
   }
 }
+
+const tree = new BinaryTree();
+tree.add(10);
+tree.add(5);
+tree.add(15);
+console.log(tree);
+console.log(tree.inOrder(tree.root));
+
+
+module.exports = BinaryTree;
