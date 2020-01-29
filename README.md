@@ -40,4 +40,6 @@ Standard methodology for linked list
 Implement a function to validate sets of brackets in a string
 ## Methodology
 
+# Binary Search Tree
+## Methodology
 

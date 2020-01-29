@@ -10,15 +10,41 @@ class BinaryTree {
   constructor(){
     this.root = null;
   }
+
   inOrder(root, array = []){
     if(root !== null){ 
       this.inOrder(root.left, array); 
-      console.log(root.value); 
       array.push(root.value);
       this.inOrder(root.right, array); 
     } 
     return array;
   } 
+
+  preOrder(root, array = []){
+    if(root !== null){
+      array.push(root.value); 
+      this.inOrder(root.left, array); 
+      this.inOrder(root.right, array); 
+    } 
+    return array;
+  } 
+
+  postOrder(root, array = []){
+    if(root !== null){
+      this.inOrder(root.right, array); 
+      array.push(root.value); 
+      this.inOrder(root.left, array); 
+    } 
+    return array;
+  } 
+
+  contains(value){
+    const array = this.inOrder(this.root);
+    if(array.includes(value)){
+      return true;
+    }
+    else return false;
+  }
 
   add(value){
     if(!this.root){
@@ -26,7 +52,6 @@ class BinaryTree {
       return;
     }
     let currentNode = this.root;
-    console.log(currentNode, 'current node');
 
     // eslint-disable-next-line no-constant-condition
     while(true){
@@ -48,13 +73,5 @@ class BinaryTree {
     }
   }
 }
-
-const tree = new BinaryTree();
-tree.add(10);
-tree.add(5);
-tree.add(15);
-console.log(tree);
-console.log(tree.inOrder(tree.root));
-
 
 module.exports = BinaryTree;
