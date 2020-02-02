@@ -23,17 +23,17 @@ class BinaryTree {
   preOrder(root, array = []){
     if(root !== null){
       array.push(root.value); 
-      this.inOrder(root.left, array); 
-      this.inOrder(root.right, array); 
+      this.preOrder(root.left, array); 
+      this.preOrder(root.right, array); 
     } 
     return array;
   } 
 
   postOrder(root, array = []){
     if(root !== null){
-      this.inOrder(root.right, array); 
+      this.postOrder(root.right, array); 
       array.push(root.value); 
-      this.inOrder(root.left, array); 
+      this.postOrder(root.left, array); 
     } 
     return array;
   } 
