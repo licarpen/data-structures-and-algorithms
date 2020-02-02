@@ -38,6 +38,25 @@ class BinaryTree {
     return array;
   } 
 
+  breadthFirst(){
+    const treeArray = [this.root];
+    const elementsBFS = [];
+    while(treeArray.length > 0) {
+      const currentNode = treeArray.shift();
+      elementsBFS.push(currentNode.value);
+      if(!currentNode.left && !currentNode.right) {
+        continue;
+      }
+      if(currentNode.left) {
+        treeArray.push(currentNode.left);
+      }
+      if(currentNode.right) {
+        treeArray.push(currentNode.right);
+      }
+    }
+    return elementsBFS;
+  }
+
   contains(value){
     const array = this.inOrder(this.root);
     if(array.includes(value)){

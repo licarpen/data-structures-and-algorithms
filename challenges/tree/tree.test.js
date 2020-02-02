@@ -38,4 +38,11 @@ describe('BinaryTree class', () => {
     tree.add(10);
     expect(tree.contains(5)).toEqual(false); 
   });
+  it('exectutes a breadthFirst search appropriately for a tree with 5 values', () => {
+    tree.add(5);
+    tree.add(7);
+    tree.add(3);
+    tree.add(4);
+    expect(tree.breadthFirst()).toEqual([5, 3, 7, 4]);
+  });
 });
