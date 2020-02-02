@@ -45,4 +45,18 @@ describe('BinaryTree class', () => {
     tree.add(4);
     expect(tree.breadthFirst()).toEqual([5, 3, 7, 4]);
   });
+  it('finds the maximum value for a tree with right nodes', () => {
+    tree.add(5);
+    tree.add(7);
+    tree.add(3);
+    tree.add(8);
+    expect(tree.findMaxValue()).toEqual(8);
+  });
+  it('finds the maximum value for a tree with only one value', () => {
+    tree.add(5);
+    expect(tree.findMaxValue()).toEqual(5);
+  });
+  it('returns message when tree is empty when findMaxValue is called', () => {
+    expect(tree.findMaxValue()).toEqual('Empty tree');
+  });
 });
