@@ -31,4 +31,4 @@ class PseudoQueue {
   }
 }
 
-module.exports = PseudoQueue ;
+module.exports = PseudoQueue;
