@@ -65,6 +65,17 @@ class BinaryTree {
     else return false;
   }
 
+  // tree is a binary search tree so max value will reside in right-most node
+  findMaxValue(){
+    if(!this.root){
+      return 'Empty tree';
+    }
+    while(this.root.right){
+      this.root = this.root.right;
+    }
+    return this.root.value;
+  }
+
   add(value){
     if(!this.root){
       this.root = new Node(value);
