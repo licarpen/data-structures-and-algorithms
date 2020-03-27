@@ -106,6 +106,22 @@ class LinkedList {
     }
     return currentNode.value;
   } 
+
+  removeDuplicates(){
+    let hash = {};
+    let currentNode = this.head;
+    let previous = null;
+    while(currentNode !== null){
+      if(hash[currentNode.value]){
+        previous.next = currentNode.next;
+      }
+      else {
+        hash[currentNode.value] = 1;
+        previous = currentNode;
+      }
+      currentNode = currentNode.next;
+    }
+  }
 }
 
 module.exports = { LinkedList, Node };

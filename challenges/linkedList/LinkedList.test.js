@@ -101,4 +101,15 @@ describe('LinkedList Class', () => {
     linkedList.insert(0);
     expect(linkedList.kFromEnd(1)).toEqual(1);
   });
+
+  it('removes duplicate values from a linked list', () => {
+    linkedList.insert(2);
+    linkedList.insert(1);
+    linkedList.insert(0);
+    linkedList.insert(1);
+    linkedList.insert(0);
+    linkedList.insert(0);
+    linkedList.removeDuplicates();
+    expect(linkedList.toString()).toEqual('0 -> 1 -> 2 -> [x]');
+  });
 });
