@@ -55,13 +55,3 @@ class Stack {
     console.log(this.masterArray.slice(this.indexMapStart[stackNum], this.indexMapStart[stackNum] + this.length).reverse().join(' -> '));
   }
 }
-
-
-const myNewStack = new Stack(3);
-myNewStack.push(1, 1);
-myNewStack.push(1, 2);
-myNewStack.display(1);
-myNewStack.push(1, 3);
-myNewStack.display(1);
-// myNewStack.pop();
-myNewStack.display(1);
