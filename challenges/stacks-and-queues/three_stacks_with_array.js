@@ -6,7 +6,7 @@
 
 class Stack {
   constructor(length) {
-    this.masterArray = Array(length * 3).fill(null);
+    this.masterArray = Array(length * 3).fill('empty');
     this.length = length;
     this.stack1Start = 0;
     this.stack1Length = 0;
@@ -31,8 +31,7 @@ class Stack {
   push(stackNum, data) {
     // check to make sure not overwriting first element in next stack.  If so, throw error.  
     if(this.indexMapLength[stackNum] >= this.length) {
-      console.log('Stack size exceeded');
-      return;
+      throw ('stack size exceeded');
     }
     
     this.masterArray[this.indexMapStart[stackNum] + this.indexMapLength[stackNum]] = data;
@@ -48,10 +47,12 @@ class Stack {
   // }
 
   displayAll() {
-    console.log(this.masterArray);
+    return this.masterArray.reverse().join(' -> ');
   }
 
   display(stackNum) {
-    console.log(this.masterArray.slice(this.indexMapStart[stackNum], this.indexMapStart[stackNum] + this.length).reverse().join(' -> '));
+    return this.masterArray.slice(this.indexMapStart[stackNum], this.indexMapStart[stackNum] + this.length).reverse().join(' -> ');
   }
 }
+
+module.exports = { Stack };
