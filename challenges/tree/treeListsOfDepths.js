@@ -49,6 +49,7 @@ class BinaryTree {
 
     let currentNode = this.root;
 
+    // eslint-disable-next-line no-constant-condition
     while(true){
       if(value < currentNode.value){
         if(!currentNode.left){
@@ -70,9 +71,9 @@ class BinaryTree {
 
   inOrder(node = this.root) {
     if(node){
-      this.inOrder(node.left)
+      this.inOrder(node.left);
       console.log(node.value, '->');
-      this.inOrder(node.right)
+      this.inOrder(node.right);
     }
   }
 
@@ -95,9 +96,9 @@ class BinaryTree {
     }
 
     const rootLinkedList = new LinkedList();
-    rootLinkedList.add(returnArray[0].value)
+    rootLinkedList.add(returnArray[0].value);
     const linkedListArray = [rootLinkedList];
-    for (let i = 1; i < returnArray.length; i++){
+    for(let i = 1; i < returnArray.length; i++){
       if(returnArray[i].level === returnArray[i - 1].level){
         linkedListArray[linkedListArray.length - 1].add(returnArray[i].value);
       }
@@ -123,4 +124,3 @@ tree.add(13);
 
 tree.inOrder();
 
-console.log(JSON.stringify(tree.levelTraverse()));
