@@ -72,6 +72,7 @@ class BinaryTree {
   inOrder(node = this.root) {
     if(node){
       this.inOrder(node.left);
+      // eslint-disable-next-line no-console
       console.log(node.value, '->');
       this.inOrder(node.right);
     }
