@@ -74,6 +74,9 @@ stack.js contains constructors for two classes, Node (as described above) and St
 * mulit-bracket-validation: checks if a string containing multiple pairs of brackets is of valid syntax
 * pseudo-queue.js implements a queue with stacks
 
+## Sorting
+
+* Problem 10.2: group together the anagrams in an array of strings
 
 ## Binary Search Tree
 

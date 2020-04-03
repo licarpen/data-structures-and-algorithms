@@ -5,7 +5,7 @@
 // time complexity: n^2
 // space complexity: 1
 
-const strings = ['tab', 'dog', 'abcd', 'bat', 'ot', 'god', 'code', 'bacd', 'abt', 'to']
+const strings = ['tab', 'dog', 'abcd', 'bat', 'ot', 'god', 'code', 'bacd', 'abt', 'to'];
 
 const isAnagram = (str1, str2) => {
   if(str1.length !== str2.length) return false;
