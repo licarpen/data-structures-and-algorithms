@@ -97,3 +97,22 @@ tree.js contains constructors for two classes, Node (as described above) and Bin
 * Problem 4.3: Lists of Depths
   * Given a binary tree, design an algorithm which creates a linked list of all the nodes at each depth (if you have a tree with depth D, you'll have D linked lists)
 * fizzBuzzTree(tree) replaces values of a tree with fizz, buzz, and fizzbuzz depending on properties of each value
+
+## Trie
+
+trie.js constains constructors for two classes, Node and Trie.  
+
+### Node Properties
+
+* value
+* children (array of nodes)
+* isEnd (boolean)
+
+### Trie Properties and Methods
+
+* root: a node
+* add(word)
+* contains(word): boolean
+* countWordsWithPrefix(pre)
+  * uses recursion to do a depth-first search for all words containing the prefix
+  * returns result object { count: int, words: []}
