@@ -92,7 +92,7 @@ class Trie {
   }
   
   print() {
-    console.log(JSON.stringify(this, null, 2));
+    return this;
   }
 }
 
@@ -105,3 +105,5 @@ aTrie.add('bate');
 aTrie.contains('b');
 // aTrie.countWordsWithPrefix('a');
 console.log(aTrie.countWordsWithPrefix('bf'));
+
+module.exports = { Node, Trie };
