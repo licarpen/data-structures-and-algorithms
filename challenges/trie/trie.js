@@ -96,14 +96,4 @@ class Trie {
   }
 }
 
-const aTrie = new Trie();
-aTrie.add('apk');
-aTrie.add('bat');
-aTrie.add('apko');
-aTrie.add('ba');
-aTrie.add('bate');
-aTrie.contains('b');
-// aTrie.countWordsWithPrefix('a');
-console.log(aTrie.countWordsWithPrefix('bf'));
-
 module.exports = { Node, Trie };
