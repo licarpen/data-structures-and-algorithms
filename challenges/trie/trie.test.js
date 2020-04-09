@@ -1,4 +1,4 @@
-const { Trie } = require('./Trie.js');
+const { Trie } = require('./trie.js');
 
 describe('Trie class', () => {
   let trie;
