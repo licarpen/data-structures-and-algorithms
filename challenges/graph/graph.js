@@ -17,10 +17,6 @@ class Graph {
     return this.nodes.find(node => node.value === value);
   }
   
-  getEdges(valuesArr) {
-    return this.nodes.filter(node => valuesArr.includes(node.value));
-  }
-  
   add(data, edgesOut = [], edgesIn = []){
     const node = new Node(data);
     this.nodes.push(node);
