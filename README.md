@@ -116,3 +116,34 @@ trie.js constains constructors for two classes, Node and Trie.
 * countWordsWithPrefix(pre)
   * uses recursion to do a depth-first search for all words containing the prefix
   * returns result object { count: int, words: []}
+
+  ## Graph
+
+  graph.js contains constructors for two classes, Node and Graph
+
+  ### Node Properties
+
+  * value
+  * adjacent (array)
+
+  ### Graph Properties and Methods
+
+  * nodes
+  * findByValue(value)
+    * returns node with value or undefined
+  * add(data, edgesOut = [], edgesIn = [])
+    * adds a node to the graph with value
+    * finds nodes associated with values in edgesOut and adds edge from new node to each mathching edgesOut node
+    * finds nodes associated with values in edgesIn and adds edge from node matching edgesIn value to new node
+  * edge(fromValue, toValue)
+    * adds edge from existing node matching fromValue to existing node matching toValue
+  * isRoute(valueA, valueB)
+    * problem 4.1: Given a directed graph, design an algorithm to find out whether there is a route between two nodes
+    * returns true is route exists
+    * returns false otherwise
+
+  ## Dynamic Programming
+
+  * stair-hops.js
+    * Problem 8.1 Triple Step: A child is running up a staircase with n steps and can hop either 1 step, 2 steps, or 3 steps at a time. Implement a method to count how many possible ways the child can run up the stairs. 
+    * best solution uses memoization to count the number of ways 'n' steps can be taken
