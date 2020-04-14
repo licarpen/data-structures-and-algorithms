@@ -126,7 +126,7 @@ trie.js constains constructors for two classes, Node and Trie.
   * value
   * adjacent (array)
 
-  ## Graph Properties and Methods
+  ### Graph Properties and Methods
 
   * nodes
   * findByValue(value)
@@ -141,3 +141,9 @@ trie.js constains constructors for two classes, Node and Trie.
     * problem 4.1: Given a directed graph, design an algorithm to find out whether there is a route between two nodes
     * returns true is route exists
     * returns false otherwise
+
+  ## Dynamic Programming
+
+  * stair-hops.js
+    * Problem 8.1 Triple Step: A child is running up a staircase with n steps and can hop either 1 step, 2 steps, or 3 steps at a time. Implement a method to count how many possible ways the child can run up the stairs. 
+    * best solution uses memoization to count the number of ways 'n' steps can be taken
