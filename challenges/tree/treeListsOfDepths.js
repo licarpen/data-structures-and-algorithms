@@ -26,6 +26,19 @@ class LinkedList {
     }
     currentNode.next = node;
   }
+
+  addNode(node) {
+    if(!this.head) {
+      this.head = node;
+      return;
+    }
+    let currentNode = this.head;
+    while(currentNode.next) {
+      currentNode = currentNode.next;
+    }
+    currentNode.next = node;
+    ++this.size;
+  }
 }
 
 class BinaryTreeNode {
@@ -110,6 +123,24 @@ class BinaryTree {
       }
     }
     
+    return linkedListArray;
+  }
+
+  levelTraverseTakeTwo(){
+    const linkedListArray = [];
+    let currentLinkedList = new LinkedList();
+    if(this.root !== null) currentLinkedList.add(this.root);
+    while(currentLinkedList.size > 0){
+      linkedListArray.push(currentLinkedList);
+      const parentsLinkedList = currentLinkedList;
+      currentLinkedList = new LinkedList();
+      let currentNode = parentsLinkedList.head;
+      while(currentNode.next) {
+        if(currentNode.left) currentLinkedList.add(currentNode.left);
+        if(currentNode.right) currentLinkedList.add(currentNode.right);
+        currentNode = currentNode.next;
+      }
+    }
     return linkedListArray;
   }
 }
