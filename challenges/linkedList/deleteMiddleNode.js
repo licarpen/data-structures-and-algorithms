@@ -14,10 +14,10 @@ class LinkedList {
   }
 
   add(node){
-    if (!this.head) this.head = node;
+    if(!this.head) this.head = node;
     else {
       let current = this.head;
-      while (current.next) current = current.next;
+      while(current.next) current = current.next;
       current.next = node;
     }
   }
