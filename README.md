@@ -17,6 +17,9 @@ Tested implementation of a variety of array methods, linked lists, queues, stack
 ## Hash Map
   * charachtersHash(string): constructs a hash map for frequency of characters in a string
 
+## Sets
+  * 8.4 Power Set: Write a method to return all subsets of a set
+
 ## Linked Lists
 
 LinkedList.js contains constrcutors for two classes, Node and LinkedList. 
