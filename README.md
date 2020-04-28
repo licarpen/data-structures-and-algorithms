@@ -9,6 +9,10 @@ Tested implementation of a variety of array methods, linked lists, queues, stack
   * array-shift: inserts an element in the middle of an array
   * Problem 1.1 isUnique: checks if elements of an array are unique
   * Problem 1.2 checkPermutation: checks if string 1 is a permutation of string 2
+  * Problem 1.4 isPalindromPermutation: checks if string is a permutation of a palindrome
+    * uses hash map
+  * Problem 1.5 isOneAway: checks if string1 is less than 2 edits away (deletion, addition, substitution) from string2 using a hash map
+  * Problem 1.5 isOneWayLoops: checks if string1 is less than 2 edits away (deletion, addition, substitution) from string2 by iterating through strings and tracking edits
 
 ## Hash Map
   * charachtersHash(string): constructs a hash map for frequency of characters in a string
