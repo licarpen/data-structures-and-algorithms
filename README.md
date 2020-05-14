@@ -2,7 +2,7 @@
 
 ## Overview
 
-Tested implementation of a variety of array methods, linked lists, queues, stacks, binary search trees, search and sort algorithms, recursion, and more.  Includes selected exercises from Cracking the Coding Interview.  And problem numbers listed refer to this text.  
+Tested implementation of a variety of array methods, linked lists, queues, stacks, binary search trees, search and sort algorithms, recursion, and more.  Includes selected exercises from Cracking the Coding Interview.  Any problem numbers listed refer to this text.  
 
 ## Arrays and Strings
   * array-reverse: reverses the elements of an array
@@ -13,6 +13,7 @@ Tested implementation of a variety of array methods, linked lists, queues, stack
     * uses hash map
   * Problem 1.5 isOneAway: checks if string1 is less than 2 edits away (deletion, addition, substitution) from string2 using a hash map
   * Problem 1.5 isOneWayLoops: checks if string1 is less than 2 edits away (deletion, addition, substitution) from string2 by iterating through strings and tracking edits
+  * Problem 1.7 swapColumns(swapRowsColumns(medium)): Rotates an n x n matrix by 90 degrees (clockwise) in place.
 
 ## Hash Map
   * charachtersHash(string): constructs a hash map for frequency of characters in a string
