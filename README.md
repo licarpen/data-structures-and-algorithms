@@ -2,7 +2,7 @@
 
 ## Overview
 
-Tested implementation of a variety of array methods, linked lists, queues, stacks, binary search trees, search and sort algorithms, recursion, and more.  Includes selected exercises from Cracking the Coding Interview.  And problem numbers listed refer to this text.  
+Tested implementation of a variety of array methods, linked lists, queues, stacks, binary search trees, search and sort algorithms, recursion, and more.  Includes selected exercises from Cracking the Coding Interview.  Any problem numbers listed refer to this text.  
 
 ## Arrays and Strings
   * array-reverse: reverses the elements of an array
